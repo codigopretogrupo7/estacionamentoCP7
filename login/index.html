@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html lang="pt-br">
+    <head>
+        <title>Minha Página</title>
+        <meta charset="utf-8"> <!--Iforma o Decode que o código deverar utilizar-->
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" >
+        <link rel="stylesheet" type="text/css" href="CSS/style.css" >
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light--"> <!--Barra de Navegação  navbar-expand-lg navbar-light bg-light-->
+            <a class="navbar-brand" href="#">
+                <img src="Img/global-labs.jpg" width="80" >
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quemsomos">Quem somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#parceiros">Parceiros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Serviços</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="background">
+            <div id="imagem">
+                <img src="img/parking.jpg" alt="">
+            </div>
+
+            <div id="login">
+
+                <h1 class="login">Login</h1>
+                <form  action = "salvar-usuario" method = "POST">
+                    <label for="email">Email</label><br>
+                        <input type="email" name="email" class="format" placeholder="user@email.com"required>
+                    <br>
+                    <label for="senha">Senha</label> <br>
+                        <input type="password" name="senha" class= "format" required><br>
+                        <br>
+
+                </form>
+
+                <i class="fab fa-facebook" class="texto" ></i><a>Entrar com facebook</a>
+                <i class="fab fa-google" class='texto'></i><a>Entrar com Google</a>
+
+                <div class="botoes">
+                    <button type="reset" id="botaoreset" class="botao">Excluir</button>
+                    <button type="submit" id="botaoenviar" class="botao" >Enviar</button>
+                    </div>
+            </div>
+        </div>
+
+
+       
+
+       
+
+        <footer class = "container-fluid text-center bg-footer">
+            <p>Desenvolvido por Paula Silva, sob orientação de Rafael Galleani, instrutor da Digital Inovation One</p>
+        </footer>
+        <script src="https://kit.fontawesome.com/b7370c13cf.js" crossorigin="anonymous"></script>
+
+    </body>
     
-</body>
 </html>
