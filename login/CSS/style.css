@@ -1,0 +1,60 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    height: 95vh;
+    width: 95%;
+}
+
+.background{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#imagem{
+    display: flex;
+    height: 80rem;
+    width: 50rem;
+    box-sizing:content-box;
+    height: 100vh;
+    width: 100%;
+}
+ 
+.login{
+    border: teal 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 5px 5px 3px grey; 
+    margin: auto;
+    margin-left: 20px;
+    padding: 10px; 
+    width: 50%;
+}
+
+  .texto{
+      font-family: arial;
+  }
+
+  @media screen  and (max-device-width : 671px) {
+    /* celulares */
+    
+    }
+@media screen and (min-device-width : 671px) and (max-device-width : 800px) {
+    /* tablets */
+   
+    #img{
+        width: 100%;
+    }
+    
+    }
+@media screen and (min-device-width : 1200px) {
+    /* computadores */
+    #img{
+        width: 100%;
+    }
+    }
