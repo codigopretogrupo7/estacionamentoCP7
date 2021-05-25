@@ -1,0 +1,19 @@
+.card{
+  transition: filter 0.3s;
+}
+
+.card:hover{
+  filter:brightness(1)
+}
+
+.tamanho{
+  box-sizing: border-box;
+  width: max-content;
+  float: right;
+}
+
+
+
+.brilho:hover{
+  filter: brightness(0.8);
+}
