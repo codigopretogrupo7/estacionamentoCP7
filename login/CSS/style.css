@@ -1,60 +1,122 @@
-*{
-    padding: 0px;
-    margin: 0px;
-}
+
 body{
-    height: 95vh;
-    width: 95%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+       
 }
 
-.background{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
 #imagem{
-    display: flex;
-    height: 80rem;
-    width: 50rem;
-    box-sizing:content-box;
-    height: 100vh;
+    position:absolute;
+    height: 100%;
     width: 100%;
 }
  
 .login{
-    border: teal 30px;
-    background-color: white;
+
+    background-color: #f1f1f1;    
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: 6px 3px 6px 3px grey;
     border-radius: 20px;
-    box-shadow: 5px 5px 3px grey; 
+    width: 350px;
+    height: auto;
+    border: none ;
     margin: auto;
-    margin-left: 20px;
-    padding: 10px; 
-    width: 50%;
+    padding:20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%)
+   
+}
+#Input{
+    width: 150%;
 }
 
-  .texto{
-      font-family: arial;
+.texto{
+    font-family: arial;
   }
 
-  @media screen  and (max-device-width : 671px) {
-    /* celulares */
+.facegoo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 500px;
+    height: max-content;
     
-    }
-@media screen and (min-device-width : 671px) and (max-device-width : 800px) {
-    /* tablets */
+  }
+.center{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+
+}
+.btn{
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-size: 15px; 
+    margin: 5px;
+    width: 80%;
+}
+.btn:hover{ 
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+color: white;    
+}
+.btn:active {
+    background-color: #3e8e41;
+    transform: translateY(4px);
+}
+.btn-success{   
+  background-color: #4CAF50;
+      
+}
+.btn-g{
+    background-color: red;
    
-    #img{
-        width: 100%;
+}.btn-f{
+    background-color: rgb(97, 97, 221);
+    
+}
+  @media screen  and (max-device-width: 671px) {
+    /* celulares */
+
+    body{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        height: 100%;
+        width: auto;
+           
+    }
+  
+
+    .login{  
+        display: flex;
+        flex-direction: column;
+        width: auto;
+       
     }
     
+    
+    .facegoo{
+        display: flex;
+        flex-direction:column ;
+       
     }
-@media screen and (min-device-width : 1200px) {
-    /* computadores */
-    #img{
+    .center{
+        display: flex;
+        justify-content: center;
         width: 100%;
+        height: max-content;
     }
     }
