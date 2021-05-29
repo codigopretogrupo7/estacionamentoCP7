@@ -1,0 +1,84 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.background{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+#imagem{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+}
+ 
+.login{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    width: 350px;
+    height: 500px;
+    position: relative;
+    margin: 10%;
+    padding:30px;
+
+}
+#Input{
+    width: 150%;
+}
+
+.texto{
+    font-family: arial;
+  }
+
+.facegoo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 500px;
+    height: max-content;
+  }
+.center{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+
+}
+  @media screen  and (max-device-width: 671px) {
+    /* celulares */
+  
+
+    .login{  
+        display: flex;
+        flex-direction: column;
+        border:none;
+        align-content: flex-end;
+        justify-content: space-evenly;
+        width: 75%;
+        height: 500px;
+    }
+    
+    #imagem{
+        position: fixed;
+    }
+    .facegoo{
+        display: flex;
+        flex-direction: row;
+       
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: max-content;
+    }
+    }

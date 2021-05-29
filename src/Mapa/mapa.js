@@ -1,8 +1,6 @@
 const vaga = document.getElementById('vaga')
 
-// array de vagas ocupadas
 const vagasOcupadas = [
-  
   {
     id:9,
     placa: 'xxxx-1234',
@@ -14,21 +12,26 @@ const vagasOcupadas = [
     placa:'llll-5555',
     nome:'Lucas Damasceno',
     modelo:'fusca'
-  },  
+  },
+  {
+    id:20,
+    placa:'llll-5555',
+    nome:'Joyce Andrade',
+    modelo:'fusca'
+  }
+  
   
 ]
 
-let numuroDasVagasOcupadas = []
+let num = []
 
-// esse for indentifica quais sao as vagas utilizadas e joga elas em numuroDasVagasOcupadas(logo acima)
 for( let i = 0 ; i < vagasOcupadas.length ; i++  ){
-  numuroDasVagasOcupadas.push(vagasOcupadas[i].id)
+  num.push(vagasOcupadas[i].id)
 }
 
-// funçao carregada ao iniciar para mostrar as vagas
 function carregaVagas(){
-  for( let i = 1 ; i <= 20 ; i++ ){ // carrega vinte vagas
-    if( numuroDasVagasOcupadas.indexOf(i) >= 0 ){ //verifica se a vaga[i] esta ocupada ou livre
+  for( let i = 1 ; i <= 20 ; i++ ){
+    if( num.indexOf(i) >= 0 ){
   
         vaga.innerHTML += 
         `
@@ -48,7 +51,7 @@ function carregaVagas(){
         `
       
   
-    }else{ //vaga livre
+    }else{
       
     
       vaga.innerHTML += 
@@ -70,31 +73,27 @@ function carregaVagas(){
   }
 
 }
-// funçao que mostra o cartao aberto com as informaçoes
+
 function abrir(n){
-  const cartoes = document.getElementsByClassName('cartoes') 
-  // coloquei essa constante aqui pois do lado de fora o js ainda nao carregou essas classes pois sao escritas com o js
+  const cartoes = document.getElementsByClassName('cartoes')
 
   for( let i = 0 ; i < vagasOcupadas.length ; i++ ){    
-    if( numuroDasVagasOcupadas.indexOf(n) >= 0 ){  
+    if( num.indexOf(n) >= 0 ){
       if(n === vagasOcupadas[i].id){
         cartoes[n-1].innerHTML = `
          <div class="card border-danger ">
             <div class="card-content">
             <div class="tamanho">
-              <p class=" mr-1 mt-1 brilho" onclick="fechar(${n})">
-                <span class=" border rounded danger border-danger" style="padding:5px;cursor:pointer">
-                x
-                </span>
-              </p>
+              <img src="./img/cancel_black_24dp.svg" onclick="fechar(${n})"/>   
             </div>
               <div class="card-body">   
                   <div>
-                    Placa:</br> ${vagasOcupadas[i].placa}</br><hr>
-                    Nome:</br> ${vagasOcupadas[i].nome}</br><hr>
-                    Modelo:</br> ${vagasOcupadas[i].modelo}</br><hr>
+                  <ul class="list-group list-group-flush">
+                  <li class="list-group-item">${vagasOcupadas[i].placa}</li>
+                  <li class="list-group-item">${vagasOcupadas[i].modelo}</li>
                   </div>
-                <button class="btn btn-danger m-2">Check-out</button>
+                  <input type="image" src="./img/remove_circle_outline_black_24dp.svg" onclick="location.href='1.html" />
+                  <input type="image" src="./img/edit_black_24dp.svg"/>
               </div>
             </div>
           </div>
@@ -106,16 +105,12 @@ function abrir(n){
         <div class="card border-success ">
           <div class="card-content">
             <div class="tamanho">
-              <p class=" mr-1 mt-1 brilho " onclick="fechar(${n})">
-                <span class=" border rounded danger border-danger" style="padding:5px;cursor:pointer">
-                x
-                </span>
-              </p>
+            <img src="./img/cancel_black_24dp.svg" onclick="fechar(${n})"/>   
             </div>
             <div class="card-body" onclick="abrir(${n})">
               <span>Vaga ${n} Livre</span>
             </div>
-            <button class="btn btn-success m-2">Check-in</button>
+            <input type="image" src="./img/input_black_24dp.svg"/>
           </div>
         </div>
       `
@@ -124,12 +119,12 @@ function abrir(n){
       
   }
 }
-// funçao que fecha o cartao
+
 function fechar(n){
   const cartoes = document.getElementsByClassName('cartoes')
 
   for( let i = 0 ; i < vagasOcupadas.length ; i++ ){
-    if( numuroDasVagasOcupadas.indexOf(n) >= 0 ){  
+    if( num.indexOf(n) >= 0 ){  
       if(n === vagasOcupadas[i].id){
        cartoes[n-1].innerHTML = `
        <div class="card border-danger " style="cursor:pointer">
