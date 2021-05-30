@@ -17,3 +17,7 @@
 .brilho:hover{
   filter: brightness(0.8);
 }
+
+.conteudo{
+  padding-top: 0;
+}
