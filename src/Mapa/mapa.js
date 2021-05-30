@@ -48,11 +48,15 @@ function carregaVagas(){
             <div class="card border-danger" style="cursor:pointer" >
               <div class="card-content" data-toggle="tootip"  title=${vagasOcupadas[c].nome} >
                 <div class="card-body" onclick="abrir(${i}) ">
-                  <div>
+                <div>
                     Placa:  ${vagasOcupadas[c].placa}
-                  </div>  
+                </div>  
+                <a href="../Forms/checkout.html">
                 <input type="image" src="../../img/remove_circle_outline_black_24dp.svg" />
-                 <input type="image" src="../../img/edit_black_24dp.svg"/>    
+                </a>
+                <a href="../Forms/checkin.html"> 
+                <input type="image" src="../../img/edit_black_24dp.svg" />  
+                </a>  
                 </div>
               </div>
             </div>
@@ -76,7 +80,10 @@ function carregaVagas(){
               <div class="card-body justify-content-center"  >
                 <span> ${i}</span>
               </div>
+              <a href="../Forms/checkin.html">
               <input type="image" src="../../img/input_black_24dp.svg" data-toggle="tootip"  title="Check in"/>
+              </a>
+              
             </div>
           </div>
         
